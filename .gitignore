@@ -1,0 +1,12 @@
+# Gerados pela compilação (nativo/)
+nativo/obj/
+*.o
+*.dll
+*.so
+*.exe
+
+# Editores e sistema
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store

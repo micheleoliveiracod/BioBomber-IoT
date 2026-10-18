@@ -1,0 +1,67 @@
+name: 🐛 Bug Report
+description: Algo no jogo, num teste ou num roteiro não funciona como esperado
+title: "fix: "
+labels: ["bugfix"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Reportar bug
+        A correção vai numa branch `bugfix/<nome>`, que nasce da `develop`.
+
+  - type: input
+    id: phase
+    attributes:
+      label: Fase e passo
+      placeholder: "Fase 3, passo 4"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição do Bug
+      placeholder: O que está acontecendo de errado?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Passos para Reproduzir
+      placeholder: |
+        1. Rodei `.\testar.bat 3`
+        2. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Comportamento Esperado
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Comportamento Atual
+      description: Cole a saída do `testar.bat`, do `make` ou o erro mostrado na tela do jogo
+      render: text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Componente Afetado
+      options:
+        - jogo/ (Lua)
+        - jogo/iot/ (sensores, broker, monitor)
+        - nativo/ (C/C++)
+        - testes/
+        - docs/licoes/
+        - CI/CD
+        - Outro
+    validations:
+      required: true

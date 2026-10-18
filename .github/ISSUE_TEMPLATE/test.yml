@@ -1,0 +1,32 @@
+name: 🧪 Testes
+description: Novo teste automático ou revisão de um teste existente
+title: "test: "
+labels: ["test"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description: O que precisa ser testado, e de qual fase e passo?
+    validations:
+      required: true
+
+  - type: textarea
+    id: cases
+    attributes:
+      label: Casos de teste
+      description: Entrada e saída esperada de cada caso
+      placeholder: |
+        - entrada: ... → esperado: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Critérios de Aceite
+      placeholder: |
+        - [ ] Teste nomeado como `passo N · <função>`
+        - [ ] Roda em `.\testar.bat NN` e no CI
+    validations:
+      required: true
