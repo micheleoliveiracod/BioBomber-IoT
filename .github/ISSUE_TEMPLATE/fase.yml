@@ -1,5 +1,5 @@
 name: 🎮 Fase
-description: Construção de uma fase do BioBomber (roteiro, testes e PR)
+description: Construção de uma fase do BioBomber-IoT (roteiro, testes e PR)
 title: "feat(faseNN): "
 labels: ["feature"]
 body:

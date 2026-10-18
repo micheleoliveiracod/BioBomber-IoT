@@ -1,4 +1,4 @@
-# BioBomber: Plano do projeto
+# BioBomber-IoT: Plano do projeto
 
 ## 1. Objetivo
 Desenvolver, de forma incremental, um jogo no estilo Bomberman que sirva de base para o

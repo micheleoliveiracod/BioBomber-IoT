@@ -1,4 +1,4 @@
-# Gitflow do BioBomber
+# Gitflow do BioBomber-IoT
 
 Convenção de branches, commits, Pull Requests e Kanban do projeto, seguida da aplicação às fases: milestones, labels, branches e issues.
 

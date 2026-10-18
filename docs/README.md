@@ -1,4 +1,4 @@
-# Documentação do BioBomber
+# Documentação do BioBomber-IoT
 
 | Documento | Conteúdo |
 |---|---|

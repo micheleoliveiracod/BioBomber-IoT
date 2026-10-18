@@ -1,4 +1,4 @@
-# BioBomber
+# BioBomber-IoT
 
 Jogo no estilo Bomberman desenvolvido como projeto de estudo de **Lua, C, C++ e Internet das
 Coisas (IoT)**, tendo como domínio de aplicação o **sistema imunológico humano**.

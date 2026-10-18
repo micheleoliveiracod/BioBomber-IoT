@@ -1,4 +1,4 @@
-# CI do BioBomber — roda a cada push e Pull Request.
+# CI do BioBomber-IoT — roda a cada push e Pull Request.
 # Explicação completa em docs/gitflow.md
 name: CI
 
