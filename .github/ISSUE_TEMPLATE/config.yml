@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📚 Documentação do Projeto
+    url: https://github.com/micheleoliveiracod/BioBomber-IoT/blob/main/README.md
+    about: Mapa das fases e organização do repositório
+  - name: 🎯 Gitflow do projeto
+    url: https://github.com/micheleoliveiracod/BioBomber-IoT/blob/main/docs/gitflow.md
+    about: Branches, commits, PRs, milestones e Kanban

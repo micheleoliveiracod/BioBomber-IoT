@@ -1,0 +1,82 @@
+# CI do BioBomber — roda a cada push e Pull Request.
+# Explicação completa em docs/gitflow.md
+name: CI
+
+on:
+  push:
+    branches: ["feature/**", "test/**", "bugfix/**", develop, main]
+  pull_request:
+    branches: [develop, main]
+  workflow_dispatch:
+
+jobs:
+  lua:
+    name: Testes (fases 1 até N)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar LuaJIT e gcc
+        run: sudo apt-get update && sudo apt-get install -y luajit build-essential
+
+      - name: Descobrir até qual fase testar
+        id: fase
+        shell: bash
+        run: |
+          BRANCH="${GITHUB_HEAD_REF:-$GITHUB_REF_NAME}"
+          if [[ "$BRANCH" =~ ^feature/fase([0-9]+) ]]; then
+            N=$((10#${BASH_REMATCH[1]}))
+            echo "Branch de fase: testando as fases 1 até $N"
+          else
+            N=$(tr -dc '0-9' < FASE_CONCLUIDA)
+            N=${N:-0}
+            echo "FASE_CONCLUIDA = $N: testando as fases 1 até $N"
+          fi
+          echo "n=$N" >> "$GITHUB_OUTPUT"
+
+      - name: Verificar a sintaxe de todos os .lua
+        shell: bash
+        run: |
+          status=0
+          while IFS= read -r -d '' f; do
+            luajit -b "$f" /dev/null || { echo "::error file=$f::erro de sintaxe"; status=1; }
+          done < <(find . -name '*.lua' -not -path './.git/*' -print0)
+          exit $status
+
+      - name: Compilar nativo/ (se existir)
+        if: hashFiles('nativo/Makefile') != ''
+        run: make -C nativo
+
+      - name: Rodar os testes
+        if: hashFiles('testes/rodar.lua') != '' && steps.fase.outputs.n != '0'
+        run: luajit testes/rodar.lua --ate ${{ steps.fase.outputs.n }}
+
+  dll-windows:
+    name: Compilar biobomber.dll (Windows)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Existe nativo/Makefile?
+        id: existe
+        shell: bash
+        run: |
+          if [ -f nativo/Makefile ]; then echo "ok=true" >> "$GITHUB_OUTPUT"
+          else echo "Ainda não há nativo/Makefile (só a partir da fase 5)."; echo "ok=false" >> "$GITHUB_OUTPUT"; fi
+
+      - uses: msys2/setup-msys2@v2
+        if: steps.existe.outputs.ok == 'true'
+        with:
+          msystem: UCRT64
+          install: mingw-w64-ucrt-x86_64-gcc make
+
+      - name: make
+        if: steps.existe.outputs.ok == 'true'
+        shell: msys2 {0}
+        run: make -C nativo
+
+      - uses: actions/upload-artifact@v4
+        if: steps.existe.outputs.ok == 'true'
+        with:
+          name: biobomber-dll
+          path: nativo/biobomber.dll

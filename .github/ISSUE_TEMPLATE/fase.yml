@@ -1,0 +1,87 @@
+name: 🎮 Fase
+description: Construção de uma fase do BioBomber (roteiro, testes e PR)
+title: "feat(faseNN): "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎮 Fase
+        Uma issue por fase. A branch `feature/faseNN-<nome>` parte da `develop` e retorna a ela por Pull Request.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description: Sítio anatômico, célula efetora, agente agressor e fundamentação imunológica
+      placeholder: |
+        - Sítio anatômico:
+        - Célula efetora:
+        - Agente agressor:
+        - Fundamentação imunológica:
+    validations:
+      required: true
+
+  - type: textarea
+    id: learning
+    attributes:
+      label: Objetivos de aprendizado
+      description: Conceitos de programação e de IoT desta fase
+      placeholder: |
+        - Programação:
+        - IoT:
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Etapas
+      description: Um item por passo do roteiro, cada um com o teste automático que o confirma
+      placeholder: |
+        - [ ] Passo 1: ... → teste `passo 1 · ...`
+        - [ ] Passo 2: ... → teste `passo 2 · ...`
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Critérios de Aceite
+      description: Como validar que a fase está completa?
+      placeholder: |
+        - [ ] `.\testar.bat NN` com todos os testes aprovados
+        - [ ] Fases anteriores sem regressão
+        - [ ] Integração contínua aprovada no PR
+    validations:
+      required: true
+
+  - type: input
+    id: branch
+    attributes:
+      label: Branch
+      placeholder: feature/faseNN-<nome>
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Referências
+      placeholder: |
+        - `docs/licoes/faseNN.md`
+        - `testes/faseNN_teste.lua`
+    validations:
+      required: false
+
+  - type: dropdown
+    id: milestone
+    attributes:
+      label: Milestone
+      options:
+        - M1 - Lua (fases 1 a 4)
+        - M2 - C (fases 5 a 9)
+        - M3 - C++ (fase 10)
+        - Release
+    validations:
+      required: true

@@ -1,0 +1,46 @@
+name: 🔧 Chore/Maintenance
+description: Configuração, CI, Makefile, ferramentas ou refatoração
+title: "chore: "
+labels: ["chore"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description: Por que esta tarefa é necessária?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Escopo
+      placeholder: |
+        - Tarefa 1
+        - Tarefa 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Critérios de Aceite
+      placeholder: |
+        - [ ] Critério 1
+        - [ ] Critério 2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: chore-type
+    attributes:
+      label: Tipo de Tarefa
+      options:
+        - CI/CD
+        - Makefile / compilação
+        - Configuração
+        - Refatoração
+        - Tooling
+        - Outro
+    validations:
+      required: true
