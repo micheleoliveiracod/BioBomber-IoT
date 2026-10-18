@@ -1,0 +1,36 @@
+name: 📚 Documentation
+description: Melhorias nos roteiros, no README ou no guia de Gitflow
+title: "docs: "
+labels: ["docs"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description: O que está faltando ou confuso na documentação?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Escopo
+      placeholder: |
+        - Arquivo 1
+        - Arquivo 2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Tipo de Documentação
+      options:
+        - Roteiro (docs/licoes/faseNN.md)
+        - Preparação do ambiente
+        - Gitflow / fluxo de trabalho
+        - README / PLANO
+        - Comentários no código
+        - Outro
+    validations:
+      required: true
