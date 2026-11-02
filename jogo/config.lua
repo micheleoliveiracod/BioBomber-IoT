@@ -1,5 +1,5 @@
 -- Implementacao Fase 1 · Lua: variáveis e tipos  (docs/licoes/fase01.md, passo 1)
-
+--
 -- Informacoes:
 -- jogo/config.lua — Configuracao de números e textos fixos do jogo, de modo que ao mudar algum valor, o jogo se atualize automaticamente.
 -- Os nomes em MAIÚSCULAS indicam que são constantes, ou seja, valores que não mudam durante a execução do jogo.
