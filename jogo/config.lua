@@ -24,6 +24,7 @@ config.MOSTRAR_GRADE = true    -- liga a grade (booleano: true ou false)
 config.COR_CHAO     = { 0.35, 0.02, 0.06 }  -- plasma: vermelho-escuro (interior do vaso sanguineo)
 config.COR_PAREDE   = { 0.75, 0.35, 0.40 }  -- parede do vaso (endotélio) rosa-carne
 config.COR_AGENTE   = { 0.92, 0.90, 1.00 }  -- Neutrófilo branco-lilás
+config.COR_NUCLEO_AGENTE = { 0.55, 0.25, 0.65 }  -- núcleo do neutrófilo roxo
 config.COR_BOMBA    = { 1.00, 0.85, 0.20 }  -- cápsula de anticorpos dourado
 config.COR_EXPLOSAO = { 0.60, 0.95, 1.00 }  -- liberação de anticorpos ciano-claro
 
