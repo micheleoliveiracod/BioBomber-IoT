@@ -35,7 +35,6 @@ end
 -- minutos: math.floor(segundos / 60)
 -- Os segundos que sobram: math.floor(segundos % 60). O % é o resto da divisão.
 -- montar o texto: string.format("%02d:%02d", minutos, resto). O %02d escreve o número com 2 dígitos e completa com zero à esquerda: 5 vira "05".
-
 function conversoes.formatar_tempo(segundos)
     return "00:00"
 end
