@@ -10,3 +10,9 @@ nativo/obj/
 *.swp
 Thumbs.db
 .DS_Store
+
+# Versão completa dos arquivos que misturam fases (referência local)
+.fases/
+
+# Lições das fases (material de estudo local)
+docs/licoes/
