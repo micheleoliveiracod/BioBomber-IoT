@@ -1,6 +1,6 @@
---   Implementacao Fase 1 · criar e desenhar o agente   (docs/licoes/fase01.md, passo 4)
+-- Implementacao Fase 1 · criar e desenhar o agente (docs/licoes/fase01.md, passo 4)
 -- jogo/agente.lua — célula efetora controlada pelo jogador.
--- 
+
 
 local config = require("jogo.config")
 local conversoes = require("jogo.conversoes")
@@ -41,4 +41,5 @@ love.graphics.circle("fill", x - r * 1.6, y, r)
 love.graphics.circle("fill", x,           y, r)
 love.graphics.circle("fill", x + r * 1.6, y, r)
 end
+
 return agente
