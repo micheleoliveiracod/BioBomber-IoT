@@ -24,6 +24,10 @@ local function carregar_modulos()
     J.config = require("jogo.config")
     J.conversoes = require("jogo.conversoes")
     J.agente = require("jogo.agente")
+
+    -- >>> FASE 2 (docs/licoes/fase02.md, passo 5): carregue colisao e dano
+    J.colisao = require("jogo.colisao")
+    J.dano = require("jogo.dano")
 end
 
 local function carregar_nivel(n)
@@ -84,6 +88,12 @@ function love.keypressed(tecla)
     if tecla == "pageup" and estado.nivel < 10 then estado.nivel = estado.nivel + 1 iniciar() return end
     if tecla == "pagedown" and estado.nivel > 1 then estado.nivel = estado.nivel - 1 iniciar() return end
     if estado.erro then return end
+
+    -- >>> FASE 2 (passo 6): mova o agente com as setas/WASD
+    local dc, dl = J.agente.direcao(tecla)
+    if dc ~= 0 or dl ~= 0 then
+        J.agente.mover(estado.agente, dc, dl, estado.mapa)
+    end
 end
 
 function love.draw()
