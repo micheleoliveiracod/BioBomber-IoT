@@ -1,5 +1,8 @@
 # BioBomber-IoT
 
+> **Em breve:** a versão completa e profissional do BioBomber estará disponível para venda.
+> Este repositório é o projeto de estudo que deu origem ao jogo.
+
 Jogo no estilo Bomberman desenvolvido como projeto de estudo de **Lua, C, C++ e Internet das
 Coisas (IoT)**, tendo como domínio de aplicação o **sistema imunológico humano**.
 
