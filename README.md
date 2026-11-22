@@ -77,3 +77,6 @@ docs/                     documentação do projeto
 
 A representação gráfica utiliza apenas primitivas geométricas desenhadas em código, sem
 recursos de imagem externos.
+
+## Licença
+© 2026 Michele Oliveira. **Todos os direitos reservados.** É proibido copiar, modificar, redistribuir ou vender este projeto sem autorização por escrito da autora. Veja [LICENSE](LICENSE).

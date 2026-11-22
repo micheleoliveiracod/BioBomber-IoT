@@ -1,21 +1,45 @@
-MIT License
+Copyright (c) 2026 Michele Oliveira. Todos os direitos reservados.
 
-Copyright (c) 2026 Michele Oliveira
+Este projeto (BioBomber-IoT), incluindo o código-fonte, a documentação, o
+design do jogo, os níveis, os textos, as imagens e demais conteúdos originais,
+é propriedade exclusiva de Michele Oliveira e está protegido pela legislação
+de direitos autorais (Lei nº 9.610/1998 e tratados internacionais).
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Sem autorização prévia e por escrito da autora, é PROIBIDO:
+  - copiar, reproduzir ou redistribuir este projeto, no todo ou em parte;
+  - modificar ou criar obras derivadas a partir dele;
+  - vender, sublicenciar ou usar este projeto para qualquer fim comercial;
+  - publicar este projeto, ou partes dele, em outros sites, lojas ou plataformas.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+A possibilidade de visualizar este repositório não concede nenhuma licença
+ou permissão de uso além das garantidas pelos Termos de Serviço do GitHub.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Conteúdos de terceiros mantêm as suas próprias licenças. Veja
+sons/CREDITOS.md para as músicas utilizadas.
+
+Para pedidos de autorização, entre em contato com a autora pelo GitHub:
+https://github.com/micheleoliveiracod
+
+-------------------------------------------------------------------------------
+
+Copyright (c) 2026 Michele Oliveira. All rights reserved.
+
+This project (BioBomber-IoT), including its source code, documentation, game
+design, levels, text, images and all other original content, is the exclusive
+property of Michele Oliveira and is protected by copyright law.
+
+Without prior written permission from the author, you may NOT:
+  - copy, reproduce or redistribute this project, in whole or in part;
+  - modify it or create derivative works based on it;
+  - sell, sublicense or use this project for any commercial purpose;
+  - publish this project, or any part of it, on other websites, stores or
+    platforms.
+
+Being able to view this repository does not grant any license or permission
+beyond what is granted by GitHub's Terms of Service.
+
+Third-party content keeps its own license. See sons/CREDITOS.md for the music
+used in this project.
+
+For permission requests, contact the author through GitHub:
+https://github.com/micheleoliveiracod
